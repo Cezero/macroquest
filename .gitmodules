@@ -1,6 +1,7 @@
 [submodule "src/eqlib"]
 	path = src/eqlib
-        url = https://github.com/cezero/eqlib.git
+	url = git@github.com/Cezero/eqlib.git
+	branch = cz_truebox
 [submodule "contrib/vcpkg"]
 	path = contrib/vcpkg
 	url = https://github.com/macroquest/vcpkg.git
