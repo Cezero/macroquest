@@ -329,6 +329,7 @@ MQLIB_API uint32_t GetItemTimer(ItemClient* pItem);
 MQLIB_API ItemClient* GetItemContentsByName(const char* ItemName);
 MQLIB_API DWORD GetAvailableSlots(ItemClient* pContainer, ItemClient* pItem, int *firstavailableslot);
 MQLIB_API bool LoH_HT_Ready();
+MQLIB_API ECombatState GetCombatState();
 
 /* MQ2DATAVARS */
 MQLIB_API char* GetFuncParam(const char* szMacroLine, int ParamNum, char* szParamName, size_t ParamNameLen, char* szParamType, size_t ParamTypeLen);
@@ -708,13 +709,6 @@ MQLIB_OBJECT int AddTokenMessageCmd(int StringID, fMQTokenMessageCmd Command);
 MQLIB_OBJECT void RemoveTokenMessageCmd(int StringID, int CallbackID);
 
 //----------------------------------------------------------------------------
-
-enum class GetMoneyFromStringFormat {
-	Long = 0,       // e.g. pp, gp, sp, cp
-	Short = 1,      // e.g. p, g, s, c
-};
-MQLIB_API uint64_t GetMoneyFromString(const char* string, GetMoneyFromStringFormat format = GetMoneyFromStringFormat::Long);
-MQLIB_API void FormatMoneyString(char* szBuffer, size_t bufferLength, uint64_t moneyAmount, GetMoneyFromStringFormat format = GetMoneyFromStringFormat::Long);
 
 MQLIB_API MembershipLevel GetMembershipLevel();
 inline DEPRECATE("Use GetMembershipLevel instead of GetSubscriptionLevel") int GetSubscriptionLevel() { return (int)GetMembershipLevel(); }
