@@ -21,7 +21,7 @@
 #include <tinyfsm.hpp>
 #include <memory>
 
-static bool AUTOLOGIN_DBG = false;
+static bool AUTOLOGIN_DBG = true;
 
 struct CurrentLogin
 {

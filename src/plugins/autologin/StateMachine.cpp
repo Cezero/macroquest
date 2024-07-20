@@ -415,7 +415,7 @@ public:
 		{
 			EQLS::EQClientServerData* serverData = *server_it;
 
-			if (!serverData || serverData->TrueBoxStatus == 1)
+			if (!serverData)
 				return nullptr;
 
 			return serverData;
